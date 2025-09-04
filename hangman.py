@@ -21,6 +21,7 @@ def hangman():
             lives -= 1
             print("Wrong letter, you lost a life. You now have " + str(lives) + " lives left")
             guessedLetters.append(guessWord)
+            print(wordCompletionList)
         else:
             guessedLetters.append(guessWord)
             print("You're right!")
