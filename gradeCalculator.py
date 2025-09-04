@@ -1,10 +1,4 @@
 pointsPossible = 110
-# studentScore = 76
-# studentScore = (studentScore / pointsPossible) * 100
-# studentScore = round(studentScore, 1)
-# name = "John"
-
-
 # '''
 # A - 100-90%
 # B - 89-80%
@@ -14,6 +8,18 @@ pointsPossible = 110
 # '''
 # print(studentScore)
 #Print the student name and what grade they got
+
+studentName = input("Enter student name: ")
+while True:
+    try:
+        studentScore = float(input("Enter student score: "))
+        break
+    except ValueError:
+        print("Invalid input. Please enter a numeric value for the score.")
+# studentScore = float(input("Enter student score: "))
+studentScore = (studentScore / pointsPossible) * 100
+studentScore = round(studentScore, 1)
+print(type(studentScore))
 
 def printGrade(name, score):
     if score >= 90:
@@ -27,10 +33,12 @@ def printGrade(name, score):
     else:
         print(f"{name} got an F")
 
-students = ["John", "Jane", "Doe", "Mary", "Tom"]
-scores = [76, 85, 92, 67, 54]
+# students = ["John", "Jane", "Doe", "Mary", "Tom"]
+# scores = [76, 85, 92, 67, 54]
 
-for i in range(5):
-    score = (scores[i] / pointsPossible) * 100
-    score = round(score, 1)
-    printGrade(students[i], scores[i])
+# for i in range(5):
+#     score = (scores[i] / pointsPossible) * 100
+#     score = round(score, 1)
+#     printGrade(students[i], scores[i])
+
+printGrade(studentName, studentScore)
